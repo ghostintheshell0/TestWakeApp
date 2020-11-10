@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Level : MonoBehaviour
     private Coroutine gameCompleteCoroutine = default;
 
     private int progres = 0;
+    public int NextSceneIndex;
 
     private void Start()
     {
@@ -36,7 +38,7 @@ public class Level : MonoBehaviour
     private void StepHandler()
     {
         progres++;
-        if(progres == panels.Count)
+        if(progres >= panels.Count)
         {
             if(gameCompleteCoroutine != null)
             {
@@ -46,6 +48,11 @@ public class Level : MonoBehaviour
         }
     }
 
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(NextSceneIndex);
+    }
+    
     private IEnumerator GameCompleteDelay()
     {
         yield return new WaitForSeconds(gameEndDelay);
