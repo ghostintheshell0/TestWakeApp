@@ -7,8 +7,8 @@ public class Panel : MonoBehaviour
 {
    [SerializeField] private SpriteRenderer spriteRenderer = default;
    [SerializeField] private Collider2D thisCollider = default;
+   [SerializeField] private Animator animator = default;
 
-   [SerializeField] private Color hideColor = default;
    private void OnTriggerEnter2D(Collider2D collider)
    {
        var player = collider.GetComponent<PlayerController>();
@@ -25,11 +25,11 @@ public class Panel : MonoBehaviour
    public void Hide()
    {
        thisCollider.enabled = false;
-       spriteRenderer.color = hideColor;
+       animator.Play(AnimationNames.HidePanel);
    }
    public void Show()
    {
        thisCollider.enabled = true;
-       spriteRenderer.color = Color.white;
+       animator.Play(AnimationNames.ShowPanel);
    }
 }

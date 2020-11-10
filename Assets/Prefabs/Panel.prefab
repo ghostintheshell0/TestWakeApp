@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5067771270041838982}
   - component: {fileID: 4611806830376261976}
   - component: {fileID: 5053374244691670713}
+  - component: {fileID: 8876216776000239444}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 144d14e4ef24f013a9d068cfd08b0025, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc079c292fd81b78fabe46c26524c622, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,14 +102,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1054546, y: 1.1054546}
+    oldSize: {x: 0.74, y: 0.74}
     newSize: {x: 6.08, y: 6.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!114 &5053374244691670713
 MonoBehaviour:
@@ -124,4 +125,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5067771270041838982}
   thisCollider: {fileID: 4611806830376261976}
+  animator: {fileID: 8876216776000239444}
   hideColor: {r: 1, g: 1, b: 1, a: 0.35686275}
+--- !u!95 &8876216776000239444
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575786182353053661}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9eec506e7019c50a9b0fc000f12e5fda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
