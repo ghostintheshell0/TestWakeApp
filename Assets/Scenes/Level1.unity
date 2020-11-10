@@ -609,11 +609,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51d9a892b9f57e6bbe4222cfba2c2b2, type: 3}
---- !u!1 &560745521 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2112636493931537489, guid: b51d9a892b9f57e6bbe4222cfba2c2b2, type: 3}
-  m_PrefabInstance: {fileID: 560745520}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &567449909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1424,6 +1419,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1383714754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2112636494576870763, guid: b51d9a892b9f57e6bbe4222cfba2c2b2, type: 3}
+  m_PrefabInstance: {fileID: 560745520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1395328079 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5053374244691670713, guid: 586af12785c8ee05ea6a59c2f2949e5a, type: 3}
@@ -1564,6 +1564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586af12785c8ee05ea6a59c2f2949e5a, type: 3}
+--- !u!1 &1685526813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2112636493290314639, guid: b51d9a892b9f57e6bbe4222cfba2c2b2, type: 3}
+  m_PrefabInstance: {fileID: 560745520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1717108626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8801887005259619102, guid: e6be9cb088311f27c81ebe068c15f325, type: 3}
@@ -1632,7 +1637,7 @@ MonoBehaviour:
   Completed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 560745521}
+      - m_Target: {fileID: 1383714754}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1664,6 +1669,7 @@ MonoBehaviour:
   firstPabel: {fileID: 1032748798}
   gameEndDelay: 0.2
   NextSceneIndex: 2
+  MenuSceneIndex: 0
 --- !u!114 &2029737167 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5053374244691670713, guid: 586af12785c8ee05ea6a59c2f2949e5a, type: 3}
@@ -1744,6 +1750,14 @@ PrefabInstance:
     - target: {fileID: 8801887005259619102, guid: e6be9cb088311f27c81ebe068c15f325, type: 3}
       propertyPath: Dead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1685526813}
+    - target: {fileID: 8801887005259619102, guid: e6be9cb088311f27c81ebe068c15f325, type: 3}
+      propertyPath: Dead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801887005259619102, guid: e6be9cb088311f27c81ebe068c15f325, type: 3}
+      propertyPath: Dead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6be9cb088311f27c81ebe068c15f325, type: 3}

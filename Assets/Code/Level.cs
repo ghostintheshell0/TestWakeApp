@@ -16,6 +16,7 @@ public class Level : MonoBehaviour
 
     private int progres = 0;
     public int NextSceneIndex;
+    public int MenuSceneIndex;
 
     private void Start()
     {
@@ -52,7 +53,7 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene(NextSceneIndex);
     }
-    
+
     private IEnumerator GameCompleteDelay()
     {
         yield return new WaitForSeconds(gameEndDelay);
@@ -66,5 +67,13 @@ public class Level : MonoBehaviour
         panels.Clear();
         var panelsOnStage = GameObject.FindObjectsOfType<Panel>();
         panels.AddRange(panelsOnStage);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(MenuSceneIndex);
+        }
     }
 }
