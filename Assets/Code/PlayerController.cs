@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     public void RemovePanel(Panel panel)
     {
         panels.Remove(panel);
-        if(panels.Count == 0)
+        if(panels.Count == 0 && body.simulated)
         {
             Die();
         }
@@ -77,13 +77,4 @@ public class PlayerController : MonoBehaviour
         body.simulated = false;
         animator.Play(AnimationNames.Idle);
     }
-}
-
-public static class AnimationNames
-{
-    public static int Up = Animator.StringToHash("Base Layer.Up");
-    public static int Down = Animator.StringToHash("Base Layer.Down");
-    public static int Left = Animator.StringToHash("Base Layer.Left");
-    public static int Right = Animator.StringToHash("Base Layer.Right");
-    public static int Idle = Animator.StringToHash("Base Layer.Idle");
 }

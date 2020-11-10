@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5157352452141367480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9071e681e7d8c2283bca974454b9f119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1149837c18a71b868c334fc1e8f5b99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,11 +100,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   Step:
     m_PersistentCalls:
       m_Calls: []
   body: {fileID: 3145173325573012579}
+  animator: {fileID: 7268205372771299051}
   speed: 2
   panels: []
 --- !u!50 &3145173325573012579
@@ -154,7 +167,7 @@ Animator:
   m_GameObject: {fileID: 5157352452141367480}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2172eef8840d8e9bf975a75b741dd71b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
