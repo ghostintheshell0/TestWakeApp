@@ -21,7 +21,7 @@ public class Level : MonoBehaviour
         player.Step.AddListener(StepHandler);
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         player.transform.position = firstPabel.transform.position;
 
@@ -33,7 +33,7 @@ public class Level : MonoBehaviour
         player.Revive();
     }
 
-    public void StepHandler()
+    private void StepHandler()
     {
         progres++;
         if(progres == panels.Count)

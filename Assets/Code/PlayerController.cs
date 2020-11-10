@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D body = default;
     [SerializeField] private float speed = default;
     private float actualSpeed = 0f;
-
     [SerializeField] private List<Panel> panels = default;
 
     private void Start()
@@ -62,11 +61,14 @@ public class PlayerController : MonoBehaviour
     public void Revive()
     {
         actualSpeed = speed;
+        body.simulated = true;
+        panels.Clear();
     }
 
     public void Stop()
     {
         actualSpeed = 0;
         body.velocity = Vector2.zero;
+        body.simulated = false;
     }
 }
