@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8801887005259619102}
   - component: {fileID: 3145173325573012579}
   - component: {fileID: 216119593518162400}
+  - component: {fileID: 7268205372771299051}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -100,9 +101,12 @@ MonoBehaviour:
   Dead:
     m_PersistentCalls:
       m_Calls: []
+  Step:
+    m_PersistentCalls:
+      m_Calls: []
   body: {fileID: 3145173325573012579}
   speed: 2
-  currentPanel: {fileID: 0}
+  panels: []
 --- !u!50 &3145173325573012579
 Rigidbody2D:
   serializedVersion: 4
@@ -140,3 +144,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!95 &7268205372771299051
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157352452141367480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

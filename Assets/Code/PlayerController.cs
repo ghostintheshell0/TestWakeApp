@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public UnityEvent Dead;
     public UnityEvent Step;
     [SerializeField] private Rigidbody2D body = default;
+    [SerializeField] private Animator animator = default;
     [SerializeField] private float speed = default;
-    private float actualSpeed = 0f;
     [SerializeField] private List<Panel> panels = default;
 
     private void Start()
@@ -18,23 +18,30 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+
+        if(body.simulated != true) return;
+        
         var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
 
         var velocity = new Vector2();
+        int animation = 0;
 
         if(x != 0f || y != 0f)
         {
             if(x != 0f)
             {
                 velocity.x = (x > 0f ? 1f : -1f);
+                animation = x > 0f ? AnimationNames.Right : AnimationNames.Left;
             }
             else
             {
                 velocity.y = (y > 0f ? 1f : -1f);
+                animation = y > 0f ? AnimationNames.Up : AnimationNames.Down;
             }
 
-            body.velocity = velocity * actualSpeed;
+            body.velocity = velocity * speed;
+            animator.Play(animation);
         }
     }
 
@@ -60,15 +67,23 @@ public class PlayerController : MonoBehaviour
     
     public void Revive()
     {
-        actualSpeed = speed;
         body.simulated = true;
         panels.Clear();
     }
 
     public void Stop()
     {
-        actualSpeed = 0;
         body.velocity = Vector2.zero;
         body.simulated = false;
+        animator.Play(AnimationNames.Idle);
     }
+}
+
+public static class AnimationNames
+{
+    public static int Up = Animator.StringToHash("Base Layer.Up");
+    public static int Down = Animator.StringToHash("Base Layer.Down");
+    public static int Left = Animator.StringToHash("Base Layer.Left");
+    public static int Right = Animator.StringToHash("Base Layer.Right");
+    public static int Idle = Animator.StringToHash("Base Layer.Idle");
 }
